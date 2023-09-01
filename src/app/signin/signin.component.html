@@ -1,0 +1,51 @@
+
+<div class="container shadow m-2 mt-4 border" >
+  <form  class="p-2" [formGroup]="signin" (ngSubmit)="save()" >
+      <h5 class="m-1"><u class="fw-bold">USER REGISTRATION FORM</u></h5>
+      <div class="mb-3">
+          <label for="id1" class="form-label">User Name</label>
+          <input type="text" class="form-control" id="id1" formControlName="name" >
+      </div>
+      <div class="invalid-feedback d-block" *ngIf="name?.touched && name?.invalid">
+      <div class="validationServer03Feedback" *ngIf="name?.errors?.['required']">
+        It is required.
+      </div>
+    </div>
+     
+      <div class="mb-3">
+        <label for="id4" class="form-label">Email</label>
+        <input type="text" class="form-control" id="id4" name="email" formControlName="email">
+      </div>
+      <div class="invalid-feedback d-block" *ngIf="email?.invalid && email?.touched" >
+        <div class="validationServer03Feedback" *ngIf="email?.errors?.['required']" >
+          It is required.
+        </div>
+      </div>
+
+
+<div class="mb-3">
+  <label for="id3" class="form-label">Password</label>
+  <input type="password" class="form-control" id="id3" name="password" formControlName="password">
+</div>
+<div class="invalid-feedback d-block" *ngIf="password?.invalid && password?.touched">
+  <div class="validationServer03Feedback" *ngIf="password?.errors?.['required']">
+    It is required.
+  </div>
+</div>
+
+<div class="mb-3">
+  <label for="id2" class="form-label">Mobile No</label>
+  <input type="text" class="form-control" id="id2" name="mobile" formControlName="mobile">
+</div>
+<div class="invalid-feedback d-block"*ngIf="mobile?.invalid && mobile?.touched" >
+  <div class="validationServer03Feedback" *ngIf="mobile?.errors?.['required']">
+    It is required.
+  </div>
+</div>
+
+<button class="btn btn-primary m-2" [disabled]="signin.invalid"  (click)="save()">Save</button>
+<button class="btn btn-primary m-2" routerLink="/registration">login</button>
+{{signin.value|json}}
+{{signin.invalid}}
+{{signin.valid}}
+{{signin.touched}}

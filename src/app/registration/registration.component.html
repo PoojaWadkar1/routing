@@ -1,0 +1,24 @@
+<!-- <p>registration works!</p> -->
+<div class="container m-4" routerLink="/registration">
+    
+    
+  <div class="row g-3 align-items-center">
+    <div class="col-auto">
+      <label for="inputPassword6" class="col-form-label">User Name</label>
+    </div>
+    <div class="col-auto">
+      <input type="text" id="inputPassword6" class="form-control" required >
+    </div>
+</div><br>
+    <div class="row g-3 align-items-center">
+        <div class="col-auto">
+          <label for="inputPassword6" class="col-form-label">Password</label>
+        </div>
+        <div class="col-auto">
+          <input type="text" id="inputPassword6" class="form-control" required>
+        </div>
+    </div>
+    <button class="btn btn-primary m-2" routerLink="/home">Log In</button>
+    <button class="btn btn-primary" routerLink="/signin">Sign In</button>
+</div>
+<router-outlet></router-outlet>
