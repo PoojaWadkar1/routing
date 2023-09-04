@@ -12,6 +12,7 @@ export class HomeComponent {
  numArr:number[]=[];
   
 ngOnInit(){
+  console.log('ngOnInit')
   console.log('start');
  this.fetchdata().then((el:any)=>{
   console.log(el);
